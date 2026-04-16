@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Manrope:wght@200;300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--theme-bg);
+  --color-panel: var(--theme-panel);
+  --color-ink: var(--theme-ink);
+  --color-muted: var(--theme-muted);
+  --color-line: var(--theme-line);
+  --color-accent: var(--theme-accent);
+  
+  --color-red: var(--theme-red);
+  --color-orange: var(--theme-orange);
+  --color-yellow: var(--theme-yellow);
+  --color-green: var(--theme-green);
+  --color-blue: var(--theme-blue);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Crimson Pro", ui-serif, Georgia, serif;
+}
+
+:root {
+  --theme-bg: #F8F6F3;
+  --theme-panel: #FFFFFF;
+  --theme-ink: #2D2A26;
+  --theme-muted: #8C857D;
+  --theme-line: #E5E0D8;
+  --theme-accent: #D98A59;
+  
+  --theme-red: #C27A4E;
+  --theme-orange: #D98A59;
+  --theme-yellow: #D9B382;
+  --theme-green: #8C9A86;
+  --theme-blue: #8C9A9E;
+}
+
+.dark {
+  --theme-bg: #0F1115;
+  --theme-panel: #1A1D24;
+  --theme-ink: #F8F9FA;
+  --theme-muted: #9CA3AF;
+  --theme-line: #374151;
+  --theme-accent: #E07A5F;
+  
+  --theme-red: #E07A5F;
+  --theme-orange: #F4A261;
+  --theme-yellow: #F2CC8F;
+  --theme-green: #81B29A;
+  --theme-blue: #3D5A80;
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-ink);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+.data-row {
+  display: grid;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--theme-line);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.data-row:hover {
+  background: var(--theme-ink);
+  color: var(--theme-bg);
+}
+
+.col-header {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 11px;
+  color: var(--theme-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--theme-line);
+}
+
+.data-value {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.panel {
+  border: 1px solid var(--theme-line);
+  background: var(--theme-panel);
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+}
+
+.panel-header {
+  border-bottom: 1px solid var(--theme-line);
+  padding: 1rem 1.25rem;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--theme-ink);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-line);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-muted);
+}
+
+.font-mono { font-family: "Manrope", sans-serif !important; }
